@@ -6,6 +6,7 @@ Welcome to our blood pressure recording app.It helps a user to measure systolic 
 3.View and edit the details of an added measurement.
 4.Delete a measurement.
 5.See unusual blood pressure highlighted.
+
 Each measurements has the following field:
 
 1.Date measured (presented in dd-mm-yyyy format).
