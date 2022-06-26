@@ -12,7 +12,11 @@ Each measurements has the following field:
 1.Date measured (presented in dd-mm-yyyy format).
 
 2.Time measured (presented in hh:mm format).
+
 3.Systolic pressure in mm Hg.
+
 4.Diastolic pressure in mm Hg.
+
 5.Heart rate in beats per minute.
+
 6.Comment
