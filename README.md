@@ -10,6 +10,7 @@ Welcome to our blood pressure recording app.It helps a user to measure systolic 
 Each measurements has the following field:
 
 1.Date measured (presented in dd-mm-yyyy format).
+
 2.Time measured (presented in hh:mm format).
 3.Systolic pressure in mm Hg.
 4.Diastolic pressure in mm Hg.
