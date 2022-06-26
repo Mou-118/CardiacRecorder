@@ -1,11 +1,18 @@
 # CardiacRecorder
-Welcome to our blood pressure recording app.It helps a user to measure systolic pressure, diastolic pressure and heart rate. Let’s suppose the name of the app is: “CardiacRecorder”. This app should allow users to:
+Welcome to our blood pressure recording app.It helps a user to measure systolic pressure, diastolic pressure and heart rate. Let’s suppose the name of the app is: “CardiacRecorder”. 
+This app should allow users to:
 
 1.Show a list of measurements.
+
 2.Users can add new measurements.
+
 3.View and edit the details of an added measurement.
+
 4.Delete a measurement.
+
 5.See unusual blood pressure highlighted.
+
+________________________________________________________________________
 
 Each measurements has the following field:
 
