@@ -1,5 +1,8 @@
 package com.example.cardiacrecorder;
 
+/**
+ * Here the DataModel is declared
+ */
 public class DataModel {
     String date, time,systolic, diastolic, heartrate, comment;
 

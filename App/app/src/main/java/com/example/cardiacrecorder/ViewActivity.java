@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class ViewActivity extends AppCompatActivity {
-
+    /**
+     * It shows the measurements
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

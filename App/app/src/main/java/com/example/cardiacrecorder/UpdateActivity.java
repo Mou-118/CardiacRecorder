@@ -71,7 +71,9 @@ public class UpdateActivity extends AppCompatActivity {
         diastolic.setText(""+record.getDiastolic());
         heartRate.setText(""+record.getHeartrate());
         comment.setText(""+record.getComment());
-
+/**
+ * Tasks performed when updateButton is clicked
+ */
         updateButton.setOnClickListener(v -> {
             isAllFieldsChecked = CheckAllFields();
 
@@ -102,6 +104,10 @@ public class UpdateActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * It checks whether all fields are correct or not
+     * @return
+     */
     private boolean CheckAllFields() {
         /*if (date.length() == 0) {
             date.setError("This field is required");
@@ -155,7 +161,9 @@ public class UpdateActivity extends AppCompatActivity {
         // after all validation return true if all required fields are inserted.
         return true;
     }
-
+    /**
+     * It picks the date
+     */
     private void datePicker()
     {
         date.setOnClickListener(new View.OnClickListener() {
@@ -180,6 +188,9 @@ public class UpdateActivity extends AppCompatActivity {
             }
         };
     }
+    /**
+     * It picks the time
+     */
     private void timePicker() {
         time.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -205,7 +216,9 @@ public class UpdateActivity extends AppCompatActivity {
     }
 
 
-
+    /**
+     * Function for retrieving data
+     */
 
     private void retrieveData()
     {
@@ -219,6 +232,9 @@ public class UpdateActivity extends AppCompatActivity {
             dmArrayList = new ArrayList<>();
         }
     }
+    /**
+     * Function for saving data
+     */
     private void saveData()
     {
         sharedPreferences = getSharedPreferences("uday",MODE_PRIVATE);

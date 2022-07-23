@@ -34,7 +34,10 @@ public class HomeScreen extends AppCompatActivity {
     FloatingActionButton addButton;
 
 
-
+    /**
+     * OnClickListener for saving data
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,9 @@ public class HomeScreen extends AppCompatActivity {
 
 
         addButton= findViewById(R.id.floatingActionButton);
+        /**
+         * Button for adding new measurements
+         */
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +81,9 @@ public class HomeScreen extends AppCompatActivity {
 
         }
 
+    /**
+     * It views the measurements
+     */
     private void setOnClickListener() {
         listener = new DataAdapter.RecyclerViewClickListener() {
             @Override
@@ -90,7 +99,9 @@ public class HomeScreen extends AppCompatActivity {
 
 
 
-
+    /**
+     * Function for retrieving data
+     */
 
     private void retrieveData()
     {
@@ -104,6 +115,9 @@ public class HomeScreen extends AppCompatActivity {
             dmArrayList = new ArrayList<>();
         }
     }
+    /**
+     * Function for saving data
+     */
     private void saveData()
     {
         sharedPreferences = getSharedPreferences("uday",MODE_PRIVATE);
