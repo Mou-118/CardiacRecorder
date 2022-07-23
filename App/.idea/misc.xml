@@ -13,6 +13,12 @@
         <entry key="..\:/Git/Project/CardiacRecorder/App/app/src/main/res/layout/activity_view.xml" value="0.25" />
         <entry key="..\:/Git/Project/CardiacRecorder/App/app/src/main/res/layout/fragment.xml" value="0.16197916666666667" />
         <entry key="..\:/Git/Project/CardiacRecorder/App/app/src/main/res/layout/recyclerrow.xml" value="0.4" />
+
+        <entry key="..\:/New folder/App/app/src/main/res/layout/activity_add.xml" value="0.5620608899297423" />
+        <entry key="..\:/New folder/App/app/src/main/res/layout/activity_update.xml" value="0.25" />
+        <entry key="..\:/New folder/App/app/src/main/res/layout/activity_view.xml" value="0.25" />
+        <entry key="..\:/New folder/App/app/src/main/res/layout/recyclerrow.xml" value="0.5620608899297423" />
+
       </map>
     </option>
   </component>

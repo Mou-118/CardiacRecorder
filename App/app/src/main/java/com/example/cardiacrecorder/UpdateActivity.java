@@ -2,6 +2,9 @@ package com.example.cardiacrecorder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+import android.annotation.SuppressLint;
+
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
@@ -38,6 +41,9 @@ public class UpdateActivity extends AppCompatActivity {
     EditText date,time,systolic,diastolic,heartRate,comment;
     boolean isAllFieldsChecked = false;
 
+
+
+    @SuppressLint({"NotifyDataSetChanged", "SetTextI18n"})
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,13 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateActivity">
+
+    tools:context=".UpdateActivity"
+    android:background="#FFF3E0"
+    >
+
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Date:"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
@@ -20,11 +28,19 @@
 
     <EditText
         android:id="@+id/upDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="228dp"
+        android:layout_height="46dp"
+
+
         android:ems="10"
+
         android:inputType="textPersonName"
-        android:text="Name"
+        android:background="#ffffff"
+        android:outlineAmbientShadowColor="@color/black"
+        android:radius="10dp"
+        android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -37,20 +53,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Time:"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
+        app:layout_constraintVertical_bias="0.214" />
 
     <EditText
         android:id="@+id/upTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="228dp"
+        android:layout_height="46dp"
+        android:background="#ffffff"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:outlineAmbientShadowColor="@color/black"
+        android:radius="10dp"
+        android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -63,20 +86,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Diastolic: "
+
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355" />
+        app:layout_constraintVertical_bias="0.352" />
 
     <EditText
         android:id="@+id/upDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="228dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:background="#ffffff"
+        android:outlineAmbientShadowColor="@color/black"
+        android:radius="10dp"
+        android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -89,19 +119,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Systolic:"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.165"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/upSys"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="228dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:background="#ffffff"
+        android:outlineAmbientShadowColor="@color/black"
+        android:radius="10dp"
+        android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -114,20 +153,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Heart Rate:"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.622" />
 
     <EditText
         android:id="@+id/hrUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="228dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:background="#ffffff"
+        android:outlineAmbientShadowColor="@color/black"
+        android:radius="10dp"
+        android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -140,26 +186,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Comment: "
+
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintVertical_bias="0.75" />
 
     <EditText
         android:id="@+id/upComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="228dp"
+        android:layout_height="60dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:background="#ffffff"
+        android:outlineAmbientShadowColor="@color/black"
+        android:radius="10dp"
+        android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
+
+        app:layout_constraintVertical_bias="0.843" />
+
 
     <Button
         android:id="@+id/upButton"
