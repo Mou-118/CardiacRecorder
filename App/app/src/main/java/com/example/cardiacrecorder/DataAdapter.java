@@ -20,22 +20,20 @@ import java.util.ArrayList;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> {
     Context context;
-    ArrayList<DataModel> dmArrayList;
+  //  ArrayList<DataModel> dmArrayList;
     static RecyclerViewClickListener listener;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     Gson gson;
 
 
-    /**
-     * It takes parameter for DataAdapter
-     * @param context
-     * @param dmArrayList
-     * @param listener
-     */
-    public DataAdapter(Context context, ArrayList<DataModel> dmArrayList , RecyclerViewClickListener listener){
+
+
+
+    public DataAdapter(Context context,RecyclerViewClickListener listener){
+
         this.context=context;
-        this.dmArrayList=dmArrayList;
+     //   this.dmArrayList=dmArrayList;
         this.listener = listener;
     }
 
@@ -54,9 +52,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
      */
     @Override
     public void onBindViewHolder(@NonNull DataAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.tvDate.setText(dmArrayList.get(position).getDate().toString());
-        holder.tvDia.setText(dmArrayList.get(position).getDiastolic().toString());
-        holder.tvSys.setText(dmArrayList.get(position).getSystolic().toString());
+        holder.tvDate.setText(RecordList.myArraylist.get(position).getDate().toString());
+        holder.tvDia.setText(RecordList.myArraylist.get(position).getDiastolic().toString());
+        holder.tvSys.setText(RecordList.myArraylist.get(position).getSystolic().toString());
 
         holder.editButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,15 +71,17 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
         holder.delButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                dmArrayList.remove(position);
+                RecordList.myArraylist.remove(position);
+//                new RecordList().deleteRecord(position);
+                //dmArrayList.remove(position);
                 sharedPreferences = context.getSharedPreferences("uday",Context.MODE_PRIVATE);
                 editor = sharedPreferences.edit();
                 gson = new Gson();
-                String jsonString = gson.toJson(dmArrayList);
+                String jsonString = gson.toJson(RecordList.myArraylist);
                 editor.putString("record",jsonString);
                 editor.apply();
                 HomeScreen.dataAdapter.notifyDataSetChanged();
+
             }
         });
 
@@ -94,7 +94,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
      */
     @Override
     public int getItemCount() {
-        return dmArrayList.size();
+        return RecordList.myArraylist.size();
     }
 
     public static class MyViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener{

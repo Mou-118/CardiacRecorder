@@ -87,8 +87,8 @@ public class AddActivity extends AppCompatActivity {
 
             isAllFieldsChecked = CheckAllFields();
             if (isAllFieldsChecked) {
-
-                //String timeStr = time.getText().toString();
+                String dateStr = date.getText().toString();
+                String timeStr = time.getText().toString();
                 String sysInt = systolic.getText().toString();
                 String diasInt = diastolic.getText().toString();
                 String heartInt = heartrate.getText().toString();
@@ -96,11 +96,12 @@ public class AddActivity extends AppCompatActivity {
 
                 dataModel = new DataModel(dateStr,timeStr,sysInt,diasInt,heartInt,commentStr);
 
-                recordArraylist.add(dataModel);
+                //recordArraylist.add(dataModel);
+                new RecordList().addRecord(dataModel);
                 Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show();
                 PreferenceManager.getDefaultSharedPreferences(this).edit().clear().commit();
                 saveData();
-
+                HomeScreen.dataAdapter.notifyDataSetChanged();
                 Intent i = new Intent(AddActivity.this, HomeScreen.class);
                 startActivity(i);
                 finish();
@@ -112,7 +113,9 @@ public class AddActivity extends AppCompatActivity {
     }
 
     /**
+
      * It checks whether all fields are correct or not
+
      * @return
      */
     private boolean CheckAllFields()
@@ -172,7 +175,7 @@ public class AddActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("uday",MODE_PRIVATE);
         editor = sharedPreferences.edit();
         gson = new Gson();
-        String jsonString = gson.toJson(recordArraylist);
+        String jsonString = gson.toJson(RecordList.myArraylist);
         editor.putString("record",jsonString);
         editor.apply();
     }

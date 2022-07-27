@@ -7,6 +7,7 @@
 
     tools:context=".ViewActivity"
     android:background="#FFF3E0"
+    android:id="@+id/viewID"
     >
 
 

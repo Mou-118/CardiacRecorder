@@ -50,9 +50,10 @@ public class HomeScreen extends AppCompatActivity {
         //dmArrayList.add(dataModel);
        // dmArrayList.add(new DataModel("12-1-12","11:21","120","80","60","sit"));
         retrieveData();
+
         recyclerView = findViewById(R.id.recyclerView);
         linearLayoutManager = new LinearLayoutManager(HomeScreen.this,LinearLayoutManager.VERTICAL,false);
-        dataAdapter = new DataAdapter(HomeScreen.this,dmArrayList, listener);
+        dataAdapter = new DataAdapter(HomeScreen.this, listener);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(dataAdapter);
 
@@ -109,10 +110,10 @@ public class HomeScreen extends AppCompatActivity {
         gson = new Gson();
         String jsonString = sharedPreferences.getString("record",null);
         Type type = new TypeToken<ArrayList<DataModel>>(){}.getType();
-        dmArrayList = gson.fromJson(jsonString,type);
-        if(dmArrayList ==null)
+        RecordList.myArraylist = gson.fromJson(jsonString,type);
+        if(RecordList.myArraylist ==null)
         {
-            dmArrayList = new ArrayList<>();
+            RecordList.myArraylist = new ArrayList<>();
         }
     }
     /**
@@ -123,7 +124,7 @@ public class HomeScreen extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("uday",MODE_PRIVATE);
         editor = sharedPreferences.edit();
         gson = new Gson();
-        String jsonString = gson.toJson(dmArrayList);
+        String jsonString = gson.toJson(RecordList.myArraylist);
         editor.putString("record",jsonString);
         editor.apply();
     }

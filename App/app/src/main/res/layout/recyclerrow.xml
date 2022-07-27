@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
 
         android:layout_width="match_parent"
-        android:layout_height="164dp"
+        android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:cardBackgroundColor="#FFF3E0"
 
@@ -24,14 +24,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardID"
             android:layout_width="match_parent"
 
-            android:layout_height="120dp">
+            android:layout_height="wrap_content"
+
+            >
+
 
 
             <Button
                 android:id="@+id/deleteDataButton"
-                android:layout_width="126dp"
+                android:layout_width="wrap_content"
                 android:layout_height="46dp"
                 android:layout_marginTop="28dp"
 
@@ -45,19 +49,16 @@
             <Button
                 android:id="@+id/editDataButton"
 
-                android:layout_width="120dp"
-                android:layout_height="38dp"
-                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+
                 android:layout_marginEnd="24dp"
-                android:background="@android:color/white"
+
                 android:drawableLeft="@drawable/ic_outline_edit_24"
                 android:text="Edit"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/deleteDataButton"
                 app:layout_constraintEnd_toStartOf="@+id/deleteDataButton"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/datetext"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toTopOf="@+id/deleteDataButton" />
 
 
             <TextView
@@ -71,10 +72,10 @@
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.304"
+                app:layout_constraintHorizontal_bias="0.303"
                 app:layout_constraintStart_toEndOf="@+id/dia"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.246" />
+                app:layout_constraintVertical_bias="0.367" />
 
             <TextView
                 android:id="@+id/dia"
@@ -87,14 +88,14 @@
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.132"
+                app:layout_constraintHorizontal_bias="0.169"
                 app:layout_constraintStart_toEndOf="@+id/datetext"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.246" />
+                app:layout_constraintVertical_bias="0.367" />
 
             <TextView
                 android:id="@+id/datetext"
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="51dp"
                 android:text="TextView"
 
@@ -107,6 +108,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Systolic"
+                app:layout_constraintBottom_toTopOf="@+id/sys"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.774"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.941" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Diastolic"
+                app:layout_constraintEnd_toStartOf="@+id/textView20"
+                app:layout_constraintHorizontal_bias="0.425"
+                app:layout_constraintStart_toEndOf="@+id/datetext"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
