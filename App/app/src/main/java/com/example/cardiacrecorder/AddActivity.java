@@ -37,6 +37,7 @@ public class AddActivity extends AppCompatActivity {
     String dateStr, timeStr;
     boolean isAllFieldsChecked=false;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +53,9 @@ public class AddActivity extends AppCompatActivity {
         retrieveData();
         //datePicker();
         timePicker();
-
+/**
+ * OnClickListener for date
+ */
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +70,9 @@ public class AddActivity extends AppCompatActivity {
             }
         });
 
-
+/**
+ * It sets the date on dateStr
+ */
         onDateSetListener= new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -75,6 +80,9 @@ public class AddActivity extends AppCompatActivity {
                 date.setText(dateStr);
             }
         };
+        /**
+         * It defines the method of savebutton
+         */
         saveButton.setOnClickListener(v->{
 
             isAllFieldsChecked = CheckAllFields();
@@ -105,7 +113,9 @@ public class AddActivity extends AppCompatActivity {
     }
 
     /**
-     * Checks whether all fields are correct
+
+     * It checks whether all fields are correct or not
+
      * @return
      */
     private boolean CheckAllFields()
@@ -113,6 +123,10 @@ public class AddActivity extends AppCompatActivity {
 
         return true;
     }
+
+    /**
+     * It picks the time
+     */
     private void timePicker() {
         time.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,6 +151,9 @@ public class AddActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Function for retrieving data
+     */
     private void retrieveData()
     {
         sharedPreferences = getSharedPreferences("uday",MODE_PRIVATE);
@@ -149,6 +166,10 @@ public class AddActivity extends AppCompatActivity {
             recordArraylist = new ArrayList<>();
         }
     }
+
+    /**
+     * Function for saving data
+     */
     private void saveData()
     {
         sharedPreferences = getSharedPreferences("uday",MODE_PRIVATE);

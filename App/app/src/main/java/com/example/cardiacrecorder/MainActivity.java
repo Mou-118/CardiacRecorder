@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         //hideNavigationBar();
         setContentView(R.layout.activity_main);
+        /**
+         * Splash screen
+         */
         h.postDelayed(new Runnable() {
             @Override
             public void run() {

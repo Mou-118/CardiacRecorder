@@ -29,7 +29,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
 
 
 
+
     public DataAdapter(Context context,RecyclerViewClickListener listener){
+
         this.context=context;
      //   this.dmArrayList=dmArrayList;
         this.listener = listener;
@@ -43,6 +45,11 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
         return new DataAdapter.MyViewHolder(view);
     }
 
+    /**
+     * It defines the workings of all the elements of cardview
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull DataAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.tvDate.setText(RecordList.myArraylist.get(position).getDate().toString());
@@ -58,7 +65,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
 
             }
         });
-
+/**
+ * Defines the working method of delete button
+ */
         holder.delButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +88,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
 
     }
 
+    /**
+     * It returns size of dmArrayList
+     * @return
+     */
     @Override
     public int getItemCount() {
         return RecordList.myArraylist.size();
@@ -99,6 +112,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
 
         }
 
+        /**
+         * It returns the position of the clicked element
+         * @param v
+         */
         @Override
         public void onClick(View v) {
             listener.onClick(v, getAbsoluteAdapterPosition());
@@ -107,6 +124,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
 
     }
 
+    /**
+     * It returns the position when RecyclerView is clicked
+     */
     public interface RecyclerViewClickListener{
         void onClick(View v, int position);
     }

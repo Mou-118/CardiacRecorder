@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".UpdateActivity"
     android:background="#FFF3E0"
     >
+
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Date:"
+
         android:textSize="20sp"
         android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
@@ -24,6 +28,7 @@
 
     <EditText
         android:id="@+id/upDate"
+
         android:layout_width="228dp"
         android:layout_height="46dp"
 
@@ -35,6 +40,7 @@
         android:outlineAmbientShadowColor="@color/black"
         android:radius="10dp"
         android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -47,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Time:"
+
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,6 +73,7 @@
         android:outlineAmbientShadowColor="@color/black"
         android:radius="10dp"
         android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -78,6 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Diastolic: "
+
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -97,6 +106,7 @@
         android:outlineAmbientShadowColor="@color/black"
         android:radius="10dp"
         android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -109,16 +119,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Systolic:"
+
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.165"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/upSys"
+
         android:layout_width="228dp"
         android:layout_height="46dp"
         android:ems="10"
@@ -127,6 +140,7 @@
         android:outlineAmbientShadowColor="@color/black"
         android:radius="10dp"
         android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -139,6 +153,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Heart Rate:"
+
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -158,6 +173,7 @@
         android:outlineAmbientShadowColor="@color/black"
         android:radius="10dp"
         android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -170,6 +186,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Comment: "
+
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -189,12 +206,15 @@
         android:outlineAmbientShadowColor="@color/black"
         android:radius="10dp"
         android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.843" />
+
 
     <Button
         android:id="@+id/upButton"

@@ -13,11 +13,18 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class ViewActivity extends AppCompatActivity {
+
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     Gson gson;
     ArrayList<DataModel> myArrayList = RecordList.myArraylist;
     DataModel dataModel;
+
+
+    /**
+     * It shows the measurements
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

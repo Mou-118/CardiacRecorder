@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -16,6 +17,7 @@
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,9 +26,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cardID"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
 
             >
+
 
 
             <Button
@@ -36,6 +40,7 @@
                 android:layout_marginTop="28dp"
 
                 android:layout_marginEnd="40dp"
+
                 android:drawableLeft="@drawable/ic_baseline_delete_outline_24"
                 android:text="Delete"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +48,10 @@
 
             <Button
                 android:id="@+id/editDataButton"
+
                 android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+
                 android:layout_marginEnd="24dp"
 
                 android:drawableLeft="@drawable/ic_outline_edit_24"
@@ -53,13 +60,16 @@
                 app:layout_constraintEnd_toStartOf="@+id/deleteDataButton"
                 app:layout_constraintTop_toTopOf="@+id/deleteDataButton" />
 
+
             <TextView
                 android:id="@+id/sys"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
+
                 android:textSize="20sp"
                 android:textStyle="bold"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.303"
@@ -72,8 +82,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
+
                 android:textSize="20sp"
                 android:textStyle="bold"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.169"
@@ -86,11 +98,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="51dp"
                 android:text="TextView"
+
                 android:textSize="22sp"
                 android:typeface="monospace"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.067"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
