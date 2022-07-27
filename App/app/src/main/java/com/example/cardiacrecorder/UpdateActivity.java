@@ -59,7 +59,8 @@ public class UpdateActivity extends AppCompatActivity {
         timePicker();
 
 
-        record= dmArrayList.get(index);
+        //record= dmArrayList.get(index);
+        record= RecordList.myArraylist.get(index);
 
         date.setText(""+record.getDate());
         time.setText(""+record.getTime());
@@ -67,6 +68,8 @@ public class UpdateActivity extends AppCompatActivity {
         diastolic.setText(""+record.getDiastolic());
         heartRate.setText(""+record.getHeartrate());
         comment.setText(""+record.getComment());
+//        timeStr = record.getTime();
+//        dateStr = record.getDate();
 
         updateButton.setOnClickListener(v -> {
             isAllFieldsChecked = CheckAllFields();
@@ -77,15 +80,22 @@ public class UpdateActivity extends AppCompatActivity {
                 //int diasInt = Integer.parseInt(diastolic.getText().toString());
                 String diasInt = diastolic.getText().toString();
                 //int heartInt = Integer.parseInt(heartRate.getText().toString());
+                timeStr = time.getText().toString();
+                dateStr = date.getText().toString();
                 String heartInt = heartRate.getText().toString();
                 String commentStr = comment.getText().toString();
                 record = new DataModel(dateStr,timeStr,sysInt,diasInt,heartInt,commentStr);
 
-                dmArrayList.set(index, record);
-                HomeScreen.dmArrayList.set(index, record);
-                HomeScreen.dataAdapter.notifyDataSetChanged();
-                PreferenceManager.getDefaultSharedPreferences(this).edit().clear().commit();
+                //dmArrayList.set(index, record);
+                RecordList.myArraylist.set(index, record);
+
+                //HomeScreen.dmArrayList.set(index, record);
+//                RecordList.myArraylist.set(index, record);
+
+                //HomeScreen.dataAdapter.notifyDataSetChanged();
+//                PreferenceManager.getDefaultSharedPreferences(this).edit().clear().commit();
                 saveData();
+                HomeScreen.dataAdapter.notifyDataSetChanged();
                 Toast.makeText(UpdateActivity.this, "Updated!", Toast.LENGTH_SHORT).show();
                 finish();
 
@@ -209,10 +219,10 @@ public class UpdateActivity extends AppCompatActivity {
         gson = new Gson();
         String jsonString = sharedPreferences.getString("record",null);
         Type type = new TypeToken<ArrayList<DataModel>>(){}.getType();
-        dmArrayList = gson.fromJson(jsonString,type);
-        if(dmArrayList ==null)
+        RecordList.myArraylist = gson.fromJson(jsonString,type);
+        if(RecordList.myArraylist ==null)
         {
-            dmArrayList = new ArrayList<>();
+            RecordList.myArraylist = new ArrayList<>();
         }
     }
     private void saveData()
@@ -220,7 +230,7 @@ public class UpdateActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("uday",MODE_PRIVATE);
         editor = sharedPreferences.edit();
         gson = new Gson();
-        String jsonString = gson.toJson(dmArrayList);
+        String jsonString = gson.toJson(RecordList.myArraylist);
         editor.putString("record",jsonString);
         editor.apply();
     }
